@@ -1,1 +1,0 @@
-cat Gemfile.extras >> rails_app/Gemfile
