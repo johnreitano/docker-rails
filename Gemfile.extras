@@ -1,0 +1,16 @@
+
+gem 'devise'
+gem 'kaminari'
+gem 'paperclip'
+gem 'pg_search'
+gem 'simple_form'
+gem 'figaro'
+gem 'dotenv'
+gem 'activeadmin'
+gem 'active_skin'
+
+group :development do
+  gem 'awesome_print'
+  gem 'rubocop'
+  gem 'rails_db'
+end

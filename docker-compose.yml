@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432"
+    volumes:
+      - ./docker-volumes/pgdata/etc:/etc/postgresql
+      - ./docker-volumes/pgdata/log:/var/log/postgresql
+      - ./docker-volumes/pgdata/data:/var/lib/postgresql/data
+  web:
+    build: .
+    command: puma
+    volumes:
+      - ./rails_app:/rails_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
